@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2021_01_25_195401) do
     t.string "specialty"
     t.string "school"
     t.integer "years_exp"
+    t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

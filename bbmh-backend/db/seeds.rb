@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Patient.destroy_all
+Doctor.destroy_all
+Appointment.destroy_all
 
 pt1 = Patient.create(name: "Larry", phone: "(831)-555-1234")
 pt2 = Patient.create(name: "Sandy", phone: "(831)-555-2345")
