@@ -27,4 +27,3 @@ Appointment.create(patient_id: pt2.id, doctor_id: dt1.id, ailment: "Sprained Ank
 Appointment.create(patient_id: pt5.id, doctor_id: dt3.id, ailment: "Old Heart", date: "12251998", time: "10:36", location: "Dining Room")
 
 
-
