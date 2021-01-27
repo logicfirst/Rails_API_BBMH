@@ -1,18 +1,22 @@
 const URL = 'http://localhost:3000/patients'
 
 document.addEventListener('DOMContentLoaded', ()=> {
-    handleForm()
+    // handleForm()
+    fetchPatient()
 })
 
 
-function handleForm(){
-    const patientForm = document.querySelector('#contact-form')
+function fetchPatient(){
+    fetch(URL)
+    .then((res) => res.json())
+    .then(patientData => patientData.forEach((patient) => renderPatient(patient)))
+}
 
-    patientForm.name.value
-
-    patientForm.addEventListener('submit', (event)=>{
-        event.preventDefault();
-
-
-    })
+function renderPatient(patient){
+    let patientDiv = document.querySelector('#test')
+    let patientList = document.createElement('ul')
+    let listElement = document.createElement('li')
+    patientDiv.appendChild(patientList)
+    patientList.appendChild(listElement)
+    ListElement.innerText = patient.name
 }
