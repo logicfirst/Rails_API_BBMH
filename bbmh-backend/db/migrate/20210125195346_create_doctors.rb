@@ -5,6 +5,7 @@ class CreateDoctors < ActiveRecord::Migration[6.0]
       t.string :specialty
       t.string :school
       t.integer :years_exp
+      t.string :image_url
       t.timestamps
     end
   end
