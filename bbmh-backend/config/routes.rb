@@ -3,4 +3,8 @@ Rails.application.routes.draw do
 get '/patients', to: 'patients#index'
 get '/doctors', to: 'doctors#index'
 get '/appointments', to: 'appointments#index'
+post '/patients', to: 'patients#create'
+
+post '/patients', to: 'patients#index'
+
 end
