@@ -9,7 +9,7 @@ Patient.destroy_all
 Doctor.destroy_all
 Appointment.destroy_all
 
-pt1 = Patient.create(name: "Larry", phone: "(831)-555-1234")
+pt1 = Patient.create(name: "Thomas Jefferson", phone: "(831)-555-1234", issue: "Mr. krabs stepped on me!", appointment: "06/04/1776")
 pt2 = Patient.create(name: "Sandy", phone: "(831)-555-2345")
 pt3 = Patient.create(name: "Mermaid Man", phone: "(831)-555-3456")
 pt4 = Patient.create(name: "Dirty Bubble", phone: "(831)-555-4567")
@@ -21,7 +21,7 @@ dt3 = Doctor.create(name: "Dr Squidward", specialty: "Hearts", school: "Krusty K
 dt4 = Doctor.create(name: "Dr Plankton", specialty: "Claws", school: "School of Treachery", years_exp: 1, image_url: 'https://static.wikia.nocookie.net/heroes-and-villians/images/2/29/Flat%2C1000x1000%2C075%2Cf.u5.jpg/revision/latest/top-crop/width/360/height/450?cb=20180319193703')
 dt5 = Doctor.create(name: "Dr Patrick", specialty: "Fins", school: "Rock Bottom Medical School", years_exp: 3, image_url: 'https://static.wikia.nocookie.net/spongebob/images/1/1c/Patrick_as_a_Doctor.png/revision/latest?cb=20161201182934')
 
-Appointment.create(patient_id: pt1.id, doctor_id: dt4.id, ailment: "Broken Claw Bone", date: "01201999", time: "12:32", location: "Mr Krabs Office")
+Appointment.create(patient_id: pt1.id, doctor_id: dt4.id, ailment: "Sprained Ankle", date: "01201999", time: "12:32", location: "Mr Krabs Office")
 Appointment.create(patient_id: pt4.id, doctor_id: dt2.id, ailment: "Stuffy Nose", date: "05272001", time: "8:47", location: "Vault")
 Appointment.create(patient_id: pt2.id, doctor_id: dt1.id, ailment: "Sprained Ankle", date: "06052000", time: "09:51", location: "Kitchen")
 Appointment.create(patient_id: pt5.id, doctor_id: dt3.id, ailment: "Old Heart", date: "12251998", time: "10:36", location: "Dining Room")
