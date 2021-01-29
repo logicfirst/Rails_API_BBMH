@@ -23,8 +23,8 @@
     <h2 id="contact-h2">Tell Us Why Your Here:</h2>
     <p type="Name:"><input name="name" id="contact-name" placeholder="Write your name here.."></input></p>
     <p  type="Phone Number:"><input name = "number" id="contact-pn" placeholder="Let us know how to contact you back.."></input></p>
-    <p type="Whats your problem??"><input id = "contact-issue" placeholder="Tell us what ur issue is..."></input></p>
-    <p type="When are you available?"><input id="contact-appt"placeholder="When is the best time for you to come in..."></input></p>
+    <p type="Whats your problem??"><input name = "issue" id = "contact-issue" placeholder="Tell us what ur issue is..."></input></p>
+    <p type="When are you available?"><input name = "appt" id="contact-appt"placeholder="Date Example: 06/04/1776"></input></p>
     <button id="contact-button">Submit</button>
     <div id="contact-us">
       <span class="fa fa-phone"></span>Contact Number: (707) 663-4279
@@ -36,170 +36,52 @@
   
   
   <!-- LIST OF AILMENTS -->
-  <div id = "ailment-text">Pick Your Ailment:</div>
-  <section class="cards-wrapper">
+  <div id = "card-section">
+  <div id = "ailment-text"></div>
+  <div class="cards-wrapper">
     <div class="card-grid-space">
       <div class="num"></div>
-      <a class="card" href="https://cdn.shopify.com/s/files/1/0150/0643/3380/products/OvenMitt_800x.jpg?v=1563223381" style="--bg-img: url(https://cdn.shopify.com/s/files/1/0150/0643/3380/products/OvenMitt_800x.jpg?v=1563223381)">
+      <a id = "card1"class="card" href="https://www.mayoclinic.org/diseases-conditions/broken-hand/symptoms-causes/syc-20450240" style="--bg-img: url(https://cdn.shopify.com/s/files/1/0150/0643/3380/products/OvenMitt_800x.jpg?v=1563223381)">
         <div>
           <h1>Broken Claw Bone</h1>
           <p>A broken claw is a break or crack in one or more of the bones of your claw. This injury can be caused by direct blows or falls.</p>
           <div class="date">Fairly Common</div>
           <div class="tags">
-            <div class="tag">Select The Doctor</div>
+            <div class="tag">Select This Ailment</div>
           </div>
         </div>
       </a>
     </div>
     <div class="card-grid-space">
       <div class="num"> </div>
-      <a class="card" href="https://codetheweb.blog/2017/10/09/basic-types-of-html-tags/" style="--bg-img: url('https://static.wikia.nocookie.net/spongebob/images/7/70/Sherm.jpg/revision/latest?cb=20130605010849')">
+      <a id = "card2" class="card" href="https://www.mayoclinic.org/symptoms/nasal-congestion/basics/definition/sym-20050644?utm_source=Google&utm_medium=abstract&utm_content=Nasal-congestion&utm_campaign=Knowledge-panel" style="--bg-img: url('https://static.wikia.nocookie.net/spongebob/images/7/70/Sherm.jpg/revision/latest?cb=20130605010849')">
         <div>
           <h1>Stuffy Nose</h1>
           <p>Nasal passages swollen with excess fluid and mucus, may be triggered by infection, tobacco smoke, KRABBY PATTYS ,or perfume.
           </p>
           <div class="date">Very Common</div>
           <div class="tags">
-            <div class="tag">Select The Doctor</div>
+            <div class="tag">Select This Ailment</div>
           </div>
         </div>
       </a>
     </div>
     <div class="card-grid-space">
       <div class="num"> </div>
-      <a class="card" href="https://codetheweb.blog/2017/10/14/links-images-about-file-paths/" style="--bg-img: url('https://media1.tenor.com/images/010289e92951a51c0c52ab7198db2fb4/tenor.gif?itemid=5226311')">
+      <a id = "card3" class="card" href="https://www.mayoclinic.org/diseases-conditions/sprained-ankle/symptoms-causes/syc-20353225" style="--bg-img: url('https://media1.tenor.com/images/010289e92951a51c0c52ab7198db2fb4/tenor.gif?itemid=5226311')">
         <div>
           <h1>Sprained Ankle</h1>
           <p>An injury that occurs when the ankle rolls, twists, or turns in an awkward way…</p>
           <div class="date">Common</div>
           <div class="tags">
-            <div class="tag">Select The Doctor</div>
+            <div class="tag">Select This Ailment</div>
           </div>
         </div>
       </a>
     </div>
     <!-- https://images.unsplash.com/photo-1520839090488-4a6c211e2f94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38951b8650067840307cba514b554ba5&auto=format&fit=crop&w=1350&q=80 -->
-  </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <!-- <div class="ui link cards">
-    <div class="card">
-      <div class="image">
-        <img src="/images/avatar2/large/matthew.png">
-      </div>
-      <div class="content">
-        <div class="header">Matt Giampietro</div>
-        <div class="meta">
-          <a>Friends</a>
-        </div>
-        <div class="description">
-          Matthew is an interior designer living in New York.
-        </div>
-      </div>
-      <div class="extra content">
-        <span class="right floated">
-          Joined in 2013
-        </span>
-        <span>
-          <i class="user icon"></i>
-          75 Friends
-        </span>
-      </div>
-    </div>
-    <div class="card">
-      <div class="image">
-        <img src="/images/avatar2/large/molly.png">
-      </div>
-      <div class="content">
-        <div class="header">Molly</div>
-        <div class="meta">
-          <span class="date">Coworker</span>
-        </div>
-        <div class="description">
-          Molly is a personal assistant living in Paris.
-        </div>
-      </div>
-      <div class="extra content">
-        <span class="right floated">
-          Joined in 2011
-        </span>
-        <span>
-          <i class="user icon"></i>
-          35 Friends
-        </span>
-      </div>
-    </div>
-    <div class="card">
-      <div class="image">
-        <img src="/images/avatar2/large/elyse.png">
-      </div>
-      <div class="content">
-        <div class="header">Elyse</div>
-        <div class="meta">
-          <a>Coworker</a>
-        </div>
-        <div class="description">
-          Elyse is a copywriter working in New York.
-        </div>
-      </div>
-      <div class="extra content">
-        <span class="right floated">
-          Joined in 2014
-        </span>
-        <span>
-          <i class="user icon"></i>
-          151 Friends
-        </span>
-      </div>
-    </div>
-  </div> -->
-
-
-
-
-
-  
-
-  <!-- making a Doctor Info Card -->
-  <!-- <div class="card">
-    <img src="https://pm1.narvii.com/6492/2877c0f7c09d4a787684ba74d2e106e01d26cb38_hq.jpg" alt="Avatar" style="width:20%">
-    <div class="container">
-      <h4><b>Spongebob Squarepants</b></h4>
-      <p>Head Neurosurgeon</p>
-    </div>
-  </div> -->
-
+  </div>
+  </div>
   
 </body>
 </html>
