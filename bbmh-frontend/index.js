@@ -2,10 +2,12 @@ const URL = 'http://localhost:3000/patients'
 const URL2 = 'http://localhost:3000/doctors'
 const URL3 = 'http://localhost:3000/appointments'
 
+let currentAilement = ''
+let currentDoctor = ' '
+
 
 document.addEventListener('DOMContentLoaded', ()=> {
     handleForm();
-    fetchAppointments();
 })
 
 
@@ -31,6 +33,7 @@ function handleForm(patient){
             issue: event.target.issue.value,
             appointment: event.target.appt.value
         }
+        
 
         // reqPackage = {
         //     headers: {"Content-Type": "application/json"},
@@ -60,16 +63,19 @@ function renderAilments(){
 
     card1.addEventListener('click', (event)=>{
         event.preventDefault()
+        currentAilement = 'Broken Claw Bone'
         fetchDoctors()
     })
 
     card2.addEventListener('click', (event)=>{
         event.preventDefault()
+        currentAilement = 'Stuffy Nose'
         fetchDoctors()
     })
 
     card3.addEventListener('click', (event)=>{
         event.preventDefault()
+        currentAilement = 'Sprained Ankle'
         fetchDoctors()
     })
 }
@@ -81,6 +87,7 @@ function renderDoctors(doc){
 
     const displayContent = `
     <div class="card-grid-space">
+    <section id = "doctorButton">
         <div class="num">Pick Your Doctor:</div>
         <a id = "card1" class="card" style="--bg-img: url(${doc.image_url})">
             <div>
@@ -93,20 +100,66 @@ function renderDoctors(doc){
                 </div>
             </div>
         </a>
+        </section>
     </div>`;
 
     docDiv.innerHTML = displayContent;
 
-    let cardSec = document.querySelector('#card-section')
+    // let doctorButton = document.getElementById('doctorButton')
+    //     doctorButton.addEventListener('click', (event)=>{
+    //         event.preventDefault();
+    //         currentDoctor = 'doc.name'
+    //         makeAppointments()
+    //     })
+
+    let cardSec = document.getElementById('doctorGrid')
     cardSec.appendChild(docDiv)
+    
+    fetchAppointments();
+
 
 }
+
+// function makeAppointments(){
+//     let newAppointment = {
+//         ailment: currentAilement
+//         date: 
+//     }
+// }
 
 function fetchAppointments(){
     fetch(URL3)
     .then((res) => res.json())
-    .then(apptData => apptData.forEach((appt) => console.log(appt)))
+    .then(apptData => apptData.forEach((appt) => renderAppointment(appt)))
     // (doctor)=> console.log(doctor.name)
+}
+
+function renderAppointment(appt){
+
+    let apptCard = document.createElement('div')
+        apptCard.className = 'cardContent'
+
+    let apptContent = `
+    <head>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,600i&display=swap" rel="stylesheet">
+</head>
+<header>  </header>
+<div class="infocardContainer">
+  <div id="main">
+    <img src="${appt.doctor.image_url}"></img>
+  </div>
+  <div id="textbois">
+    <h2>${appt.patient.name}'s Appointment Details</h2>
+    <h4>Scheduled for ${appt.patient.appointment}</h4>
+    <h4>Doctor: ${appt.doctor.name}</h4>
+    <a>Ailment: ${appt.ailment}</a>
+  </div>
+</div>`;
+
+  apptCard.innerHTML = apptContent;
+  let apptCarddd = document.getElementById('doctorGrid')
+  apptCarddd.appendChild(apptCard)
+
 }
 
 

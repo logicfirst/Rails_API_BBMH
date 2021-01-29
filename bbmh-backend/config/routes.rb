@@ -7,4 +7,6 @@ post '/patients', to: 'patients#create'
 
 post '/patients', to: 'patients#index'
 
+post '/appointments', to: 'appointments#create'
+
 end
