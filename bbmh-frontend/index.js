@@ -167,7 +167,7 @@ function renderAppointment(appt){
 </div>`;
 
   apptCard.innerHTML = apptContent;
-  let apptCarddd = document.getElementById('doctorGrid')
+  let apptCarddd = document.getElementById('appointmentsection')
   apptCarddd.appendChild(apptCard)
 
 }
