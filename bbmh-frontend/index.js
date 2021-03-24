@@ -15,7 +15,18 @@ function fetchDoctors(){
     fetch(URL2)
     .then((res) => res.json())
     .then(DoctorData => DoctorData.forEach((doc) => renderDoctors(doc)))
-    // (doctor)=> console.log(doctor.name)
+    console.log("r we here yet");
+    (doctor)=> console.log(doctor.name)
+    let gg = document.createElement('div');
+        gg.className = 'jkj';
+
+    let tt = document.getElementById('pickyourdoctor')
+        const pickit = `<h1>Pick your Doctor:</h1>`;
+        gg.innerHTML = pickit;
+
+        tt.appendChild(gg)
+        
+
 }
 
 function handleForm(patient){
@@ -87,8 +98,7 @@ function renderDoctors(doc){
 
     const displayContent = `
     <div class="card-grid-space">
-    <section id = "doctorButton">
-        <div class="num">Pick Your Doctor:</div>
+     <section id = "doctorButton">
         <a id = "card1" class="card" style="--bg-img: url(${doc.image_url})">
             <div>
                 <h1>${doc.name}</h1>
