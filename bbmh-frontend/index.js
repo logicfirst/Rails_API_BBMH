@@ -174,11 +174,11 @@ function renderAppointment(appt){
 
 
 
-function renderPatient(patient){
-    let patientDiv = document.querySelector('#test')
-    let patientList = document.createElement('ul')
-    let listElement = document.createElement('li')
-    patientDiv.appendChild(patientList)
-    patientList.appendChild(listElement)
-    listElement.innerText = patient.name
-}
+// function renderPatient(patient){
+//     let patientDiv = document.querySelector('#test')
+//     let patientList = document.createElement('ul')
+//     let listElement = document.createElement('li')
+//     patientDiv.appendChild(patientList)
+//     patientList.appendChild(listElement)
+//     listElement.innerText = patient.name
+// }
